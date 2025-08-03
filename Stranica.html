@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a class="logo" onclick="showSection('mainSection')">MyBnB</a>
+        <div class="navbar-right">
+            <div class="dropdown" tabindex="0">
+                <button class="dropbtn" tabindex="0">Meni</button>
+                <div class="dropdown-content">
+                    <button onclick="showSection('kontakt')">Kontakt</button>
+                    <button onclick="showSection('galerija')">Galerija</button>
+                    <button onclick="showSection('pitanja')">Pitanja</button>
+                    <button onclick="showSection('okuci')">O Kuci</button>
+                </div>
+            </div>
+            <button id="backBtn" onclick="showSection('mainSection')">Nazad</button>
+        </div>
+    </div>
+    <div id="mainSection" class="section">
+        <h1>Dobrodošli na MyBnB!</h1>
+        <p>Ovo je glavna stranica.</p>
+        <div id="calendarContainer" class="calendar-section">
+            <h2>Kalendar Dostupnosti</h2>
+            <div id="calendar"></div>
+        </div>
+    </div>
+    <div id="kontakt" class="section">
+        <h2>Kontakt</h2>
+        <p>Ovdje su kontakt informacije.</p>
+    </div>
+    <div id="galerija" class="section">
+        <h2>Galerija</h2>
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Slika 1">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Slika 2">
+            <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=400&q=80" alt="Slika 3">
+            <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=400&q=80" alt="Slika 4">
+            <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80" alt="Slika 5">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Slika 6">
+        </div>
+        <div id="lightbox" class="lightbox" style="display:none;">
+            <span class="lightbox-close" id="lightboxClose">&times;</span>
+            <img id="lightboxImg" src="" alt="Povećana slika">
+        </div>
+    </div>
+    <div id="pitanja" class="section">
+        <h2>Pitanja</h2>
+        <p>Ovdje su često postavljana pitanja.</p>
+    </div>
+    <div id="okuci" class="section">
+        <h2>O Kuci</h2>
+        <p>Ovdje su informacije o kući.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
